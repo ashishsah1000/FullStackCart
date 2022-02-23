@@ -1,4 +1,5 @@
 const Product = require("../models/product");
+const ErrorHandler = require("../util/errorHandler");
 
 exports.newProduct = async (req, res, next) => {
   const product = await Product.create(req.body);
@@ -22,13 +23,12 @@ exports.getProducts = async (req, res, next) => {
 // get single products details
 
 exports.getSingleProducts = async (req, res, next) => {
-  const product = await Product.findById(req.params.id);
+  const product = await Product.findById(req.params.id).catch((err) => {
+    console.log(err);
+  });
 
   if (!product) {
-    return res.status(404).json({
-      success: false,
-      message: "product not found ",
-    });
+    return next(new ErrorHandler("product not found", 404));
   }
   res.status(200).json({
     success: true,
