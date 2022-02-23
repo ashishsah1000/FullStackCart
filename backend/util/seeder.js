@@ -14,13 +14,8 @@ const seedProducts = async () => {
   try {
     await Product.deleteMany();
     console.log("products are deleted");
-    try {
-      Product.insertMany(products, (err) => {
-        console.log(err);
-      });
-    } catch (err) {
-      console.log(err);
-    }
+    console.log("checing if products can be accessed", products);
+    await Product.insertMany(products);
     console.log("all products are added");
     process.exit();
   } catch (err) {

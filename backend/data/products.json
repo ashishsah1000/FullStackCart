@@ -1,0 +1,31 @@
+ [{
+     "name": "sandisk ultra 128",
+     "price": "45.87",
+     "discription": "This is the discription of the project",
+     "ratings": 4.5,
+     "images": [{
+       "public_id": "prodcts/something",
+       "url": "https://picsum.photos/seed/picsum/200/300"
+     }],
+     "catergory": "Electronics",
+     "seller": "Ebay",
+     "stock": 50,
+     "numOfReviews": 32,
+     "reviews": []
+   },
+   {
+     "name": "sandisk ultra 128",
+     "price": "45.87",
+     "discription": "This is the discription of the project",
+     "ratings": 4.5,
+     "images": [{
+       "public_id": "prodcts/something",
+       "url": "https://picsum.photos/seed/picsum/200/300"
+     }],
+     "catergory": "Electronics",
+     "seller": "Ebay",
+     "stock": 50,
+     "numOfReviews": 32,
+     "reviews": []
+   }
+ ]
